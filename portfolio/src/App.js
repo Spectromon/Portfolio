@@ -28,7 +28,6 @@ function App() {
         return(<i className="gg-moon"></i>);
       default:
         return(<i className="gg-sun"></i>);
-        // code block
     }
   }
 
