@@ -13,10 +13,10 @@ code {
 }
 
 :root {
-  --background: white;
-  --text-primary: black;
+  --background: #e4deda;
+  --text-primary: #141414;
 }
 [data-theme="dark"] {
-  --background: black;
-  --text-primary: white;
+  --background: #141414;
+  --text-primary: #e4deda;
 }

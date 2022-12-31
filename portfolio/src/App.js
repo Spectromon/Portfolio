@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { AppContext } from "./helpers/appContext";
 import Navbar from "./components/navBar/Navbar";
+import Display from "./components/display/Display";
 
 class App extends React.Component {
   constructor(props) {
@@ -39,6 +40,7 @@ class App extends React.Component {
       <AppContext.Provider value={this.state}>
         <div className="app" data-theme={this.state.theme}>
           <Navbar />
+          <Display />
         </div>
       </AppContext.Provider>
     );
