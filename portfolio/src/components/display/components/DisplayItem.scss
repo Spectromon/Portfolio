@@ -1,25 +1,30 @@
-@keyframes growImage {
-    0% {
-      width: 0%
-    }
-    100% {
-      width: 100%;
-    }
+@keyframes reveal {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
 .item {
   flex: 0 0 25%;
+  background-color: var(--background);
+  filter: brightness(98.5%);
+  border: 2px solid var(--background);
+  border-radius: 10px;
   transition: all 0.8s;
+  padding: 1rem;
+  animation: reveal 3s;
+  animation-iteration-count: 1;
   &__image {
+    border: 2px solid var(--background);
     display: flex;
     margin: 0 auto;
     transition: all 0.8s;
     width: 100%;
     height: 264px;
     object-fit: cover;
-    object-position: 50% 50%;
-    animation: growImage 1s;
-    animation-iteration-count: 1;
   }
   &__text {
     list-style: none;
@@ -37,12 +42,33 @@
     &--description {
       font: 12px "Tahoma";
       font-weight: 200;
+      font-style: italic;
     }
   }
 }
 
 .item:hover {
-  flex-grow: 1;
+  //flex-grow: 1;
+  filter: brightness(95%);
+  cursor: pointer;
+}
+
+.item:active {
+  filter: brightness(90%);
+}
+
+[data-theme="dark"] {
+  .item {
+    filter: brightness(102%);
+  }
+  .item:hover {
+    cursor: pointer;
+    filter: brightness(105%);
+  }
+
+  .item:active {
+    filter: brightness(115%);
+  }
 }
 
 .item:hover > .item__text {
@@ -50,7 +76,11 @@
 }
 
 .item:hover > .item__image {
-    width: 70%;
-  }
-  
-
+  width: 70%;
+  filter: brightness(100%);
+  border-radius: 10px;
+  object-position: 25% 25%;
+}
+.item:active > .item__image {
+  filter: brightness(100%) !important;
+}
