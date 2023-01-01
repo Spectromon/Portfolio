@@ -1,13 +1,23 @@
-.display{
-    &__container{
+@keyframes revealDisplay {
+  0% {
+    transform: translate(0, 100vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.display {
+  &__container {
+    animation: revealDisplay 1.5s;
+    animation-iteration-count: 1;
     display: flex;
     flex: 0 0 33.333333%;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     gap: 20px;
     margin-top: 2rem;
     overflow-y: scroll;
     max-height: calc(100vh - 20px - 38px - 2rem - 20px);
-    };
-    
+  }
 }

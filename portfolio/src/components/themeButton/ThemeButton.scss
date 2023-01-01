@@ -78,12 +78,17 @@ button {
   width: 100px;
 }
 
-button:hover .gg-sun {
+button:hover .gg-sun,
+.gg-moon {
   color: gold;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
-button:hover .gg-moon {
-  color: gold;
-  transition: all 0.5s;
+button:active .gg-sun {
+  color: darken(gold, 5%);
+}
+
+button:active .gg-moon {
+  color: lighten(gold, 10%);
 }
