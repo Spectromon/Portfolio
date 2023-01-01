@@ -15,8 +15,12 @@ code {
 :root {
   --background: #e4deda;
   --text-primary: #141414;
+  --scrollbar: #d9d1cb;
+  --polaroid: #faf8f7;
 }
 [data-theme="dark"] {
   --background: #141414;
   --text-primary: #e4deda;
+  --scrollbar: #212121;
+  --polaroid: #3a3a3a;
 }
