@@ -2,7 +2,6 @@ import React from "react";
 import "./DisplayItem.scss";
 
 function DisplayItem({ image, title, description }) {
-  console.log(image, title, description);
   return (
     <div className="item">
       <div className="item__pin" />

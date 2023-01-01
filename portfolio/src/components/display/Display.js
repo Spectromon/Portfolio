@@ -6,7 +6,6 @@ function Display() {
   return (
     <div className="display__container">
       {data.map(function (item) {
-        console.log(item);
         return(
             <DisplayItem title = {item.title} description = {item.description} image = {item.image}/>
         )
